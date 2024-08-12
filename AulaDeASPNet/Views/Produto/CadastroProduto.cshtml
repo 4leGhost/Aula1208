@@ -1,0 +1,61 @@
+﻿@model AulaDeASPNet.Models.Produto
+
+@{
+    ViewData["Title"] = "Cadastro Produto";
+}
+@* Formulário Cadastro Produto *@
+<div class="container">
+    @* LINHA TITULO *@
+    <div class="row">
+        <div class="col text-center">
+            <h1>❉ Cadastro Produto ❉</h1>
+        </div>
+    </div>
+    <form method="post">
+        @* LINHA REFERENTE À DESCRIÇÃO DO PRODUTO *@
+        <div class="row">
+            <div class="col">
+                <label for="" class="col-sm2 col-form-label fw-bold">Descrição</label>
+                <input asp-for="Descricao" class="form-control" id="Descricao" type="text" />
+            </div>
+            <div class="col-lg-3">
+                <label for="" class="col-form-label fw-bold">Preço</label>
+                <input asp-for="Preco" class="form-control" id="Preco" type="text" />
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <label asp-for="Marca" class="col-form-label fw-bold"></label>
+                    <input asp-for="Marca" class="form-control" id="Marca" type="text" />
+                </div>
+                <div class="col-lg-3">
+                    <label asp-for="Categoria" class="col-form-label fw-bold"></label>
+                    <input asp-for="Categoria" class="form-control" id="Categoria" type="text" />
+                </div>
+                <div class="col-lg-3">
+                    <label for="" class="col-form-label fw-bold">Quantidade</label>
+                    <input asp-for="Qtde" class="form-control" id="Qtde" type="text" />
+                </div>
+            </div>
+            @* LINHA REFERENTE ÀS ESPECIFICAÇÕES DO PRODUTO *@
+            <div class="row">
+                <div class="col-sm-3">
+                    <label for="" class="col-form-label fw-bold">Peso (em kg)</label>
+                    <input asp-for="Peso" class="form-control" id="Peso" type="text" />
+                </div>
+                <div class="col-sm-3">
+                    <label for="" class="col-form-label fw-bold">Largura (em cm)</label>
+                    <input asp-for="Largura" class="form-control" id="Largura" type="text" />
+                </div>
+                <div class="col-sm-3">
+                    <label for="" class="col-form-label fw-bold">Altura (em cm)</label>
+                    <input asp-for="Altura" class="form-control" id="Altura" type="text" />
+                </div>
+                <div class="row mt-3 justify-content-md-end">
+                    <div class="col-3 d-flex justify-content-end">
+                        <input type="submit" class="btn btn-outline-info btn-lg" name="name" value="Cadastrar" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

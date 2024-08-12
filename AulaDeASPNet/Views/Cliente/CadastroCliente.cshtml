@@ -1,0 +1,84 @@
+﻿@model AulaDeASPNet.Models.Cliente
+
+@{
+    ViewData["Title"] = "Cadastro Cliente";
+}
+@* Código Formulário Cadastro Cliente *@
+<div class="container">
+    @* LINHA TITULO *@
+    <div class="row">
+        <div class="col text-center">
+            <h1>❉ Cadastro Cliente ❉</h1>
+        </div>
+    </div>
+    <form method="post">
+        @* LINHA NOME E CPF *@
+        <div class="row">
+            <div class="col">
+                <label asp-for="Nome" class="col-sm2 col-form-label fw-bold"></label>
+                <input asp-for="Nome" class="form-control" id="Nome" type="text" />
+            </div>
+            <div class="col-lg-3">
+                <label asp-for="CPF" class="col-form-label fw-bold"></label>
+                <input asp-for="CPF" class="form-control" id="CPF" type="text" />
+            </div>
+            <div class="col-lg-2">
+                <label asp-for="RG" class="col-form-label fw-bold"></label>
+                <input asp-for="RG" class="form-control" id="RG" type="text" />
+            </div>
+            <div class="col-lg-2">
+                <label asp-for="Telefone" class="col-form-label fw-bold"></label>
+                <input asp-for="Telefone" class="form-control" id="Telefone" type="text" />
+            </div>
+            <div class="col-lg-2">
+                <label asp-for="Email" class="col-form-label fw-bold"></label>
+                <input asp-for="Email" class="form-control" id="Email" type="text" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label asp-for="Usuario" class="col-sm2 col-form-label fw-bold"></label>
+                <input asp-for="Usuario" class="form-control" id="Usuario" type="text" />
+            </div>
+            <div class="col">
+                <label asp-for="Senha" class="col-form-label fw-bold"></label>
+                <input asp-for="Senha" class="form-control" id="Senha" type="text" />
+            </div>
+        </div>
+
+        @* LINHA ENDEREÇO *@
+        <div class="row">
+            <div class="col-sm-2">
+                <label asp-for="CEP" class="col-sm2 col-form-label fw-bold"></label>
+                <input asp-for="CEP" class="form-control" id="CEP" type="text" />
+            </div>
+            <div class="col-sm-2">
+                <label asp-for="UF" class="col-form-label fw-bold"></label>
+                <input asp-for="UF" class="form-control" id="UF" type="text" />
+            </div>
+            <div class="col-sm-2">
+                <label asp-for="Cidade" class="col-form-label fw-bold"></label>
+                <input asp-for="Cidade" class="form-control" id="Cidade" type="text" />
+            </div>
+            <div class="col-sm-2">
+                <label asp-for="Bairro" class="col-form-label fw-bold"></label>
+                <input asp-for="Bairro" class="form-control" id="Bairro" type="text" />
+            </div>
+            <div class="col-sm-3">
+                <label asp-for="Rua" class="col-form-label fw-bold"></label>
+                <input asp-for="Rua" class="form-control" id="Rua" type="text" />
+            </div>
+            <div class="col">
+                <label asp-for="Numero" class="col-form-label fw-bold"></label>
+                <input asp-for="Numero" class="form-control" id="Numero" type="text" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-10">
+                <label asp-for="Complemento" class=" col-sm2 col-form-label fw-bolder"></label>
+                <input asp-for="Complemento" class="form-control" id="Complemento" type="text" />
+                 <input type="submit" class="btn btn-outline-info btn-lg" name="name" value="Cadastrar" />
+            </div>
+        </div>
+    </form>
+</div>
